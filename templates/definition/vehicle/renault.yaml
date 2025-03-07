@@ -1,0 +1,17 @@
+template: renault
+products:
+  - brand: Renault
+params:
+  - preset: vehicle-base
+  - name: vin
+    example: WREN...
+  - name: alternativewakeup
+    type: bool
+    description:
+      de: Alternativer Aufweckmechanismus
+      en: Alternative wakeup mechanism
+    advanced: true
+render: |
+  type: renault
+  {{ include "vehicle-base" . }}
+  alternativewakeup: {{ .alternativewakeup }}

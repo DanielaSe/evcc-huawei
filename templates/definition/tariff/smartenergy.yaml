@@ -1,0 +1,12 @@
+template: smartenergy
+products:
+  - brand: SmartEnergy
+    description:
+      generic: smartCONTROL
+group: price
+countries: ["AT"]
+params:
+  - preset: tariff-base
+render: |
+  type: smartenergy
+  {{ include "tariff-base" . }}

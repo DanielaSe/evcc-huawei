@@ -1,0 +1,16 @@
+template: amber
+products:
+  - brand: Amber Electric
+group: price
+countries: ["AU"]
+params:
+  - name: token
+  - name: siteid
+  - name: channel
+  - preset: tariff-base
+render: |
+  type: amber
+  token: {{ .token }}
+  siteid: {{ .siteid }}
+  channel: {{ .channel }}
+  {{ include "tariff-base" . }}
